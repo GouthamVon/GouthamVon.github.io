@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Upload</title>
+</head>
+<body>
+  <form id="uploadForm">
+    <label for="excelFile">Upload Excel file:</label>
+    <input type="file" id="excelFile" name="excelFile" accept=".xlsx, .xls">
+    <br>
+    <label for="selectedDate">Select Date:</label>
+    <input type="date" id="selectedDate" name="selectedDate">
+    <br>
+    <button type="button" onclick="uploadData()">Upload</button>
+  </form>
+
+  <script>
+    function uploadData() {
+      const excelFile = document.getElementById('excelFile').files[0];
+      const selectedDate = document.getElementById('selectedDate').value;
+
+      const formData = new FormData();
+      formData.append('excelFile', excelFile);
+      formData.append('selectedDate', selectedDate);
+
+      fetch('YOUR_API_GATEWAY_ENDPOINT', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        alert('Upload successful!');
+      })
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>
