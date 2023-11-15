@@ -25,6 +25,7 @@ label {
 
 input {
   margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 input[type="date"] {
