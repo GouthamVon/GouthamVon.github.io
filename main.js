@@ -11,7 +11,7 @@ function uploadData() {
   formData.append('excelFile', excelFile);
   formData.append('selectedDate', selectedDate);
 
-  fetch('YOUR_API_GATEWAY_ENDPOINT', {
+  fetch('https://asia-south1-dailyplpublish.cloudfunctions.net/publishPL', {
     method: 'POST',
     body: formData,
     headers: {
