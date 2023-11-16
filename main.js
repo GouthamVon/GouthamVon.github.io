@@ -23,7 +23,6 @@ function uploadData() {
   formData.append('excelFile', excelFile);
   formData.append('selectedDate', selectedDate);
 
-
   fetch('https://asia-south1-dailyplpublish.cloudfunctions.net/publishPL', {
     method: 'POST',
     body: formData,
