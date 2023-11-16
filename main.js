@@ -11,6 +11,8 @@ function uploadData() {
   formData.append('excelFile', excelFile);
   formData.append('selectedDate', selectedDate);
 
+  const token = 'qzjkhpvytf-rbodlcxeimnswuga-hinxqyfdkgjpwsz-mectbrouvlqa';
+
   fetch('https://asia-south1-dailyplpublish.cloudfunctions.net/publishPL', {
     method: 'POST',
     body: formData,
