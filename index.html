@@ -14,8 +14,20 @@
     <label for="selectedDate">Select Date:</label>
     <input type="date" id="selectedDate" name="selectedDate">
 
-    <button type="button" onclick="uploadData()">Upload</button>
+    <button type="button" onclick="showPopup()">Upload</button>
   </form>
+
+  <div id="popup" class="popup">
+    <form id="loginForm">
+      <label for="userId">User ID:</label>
+      <input type="text" id="userId" name="userId">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+
+      <button type="button" onclick="uploadData()">Submit</button>
+    </form>
+  </div>
 
   <script src="main.js"></script>
 </body>
