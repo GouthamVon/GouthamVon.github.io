@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('uploadForm').addEventListener('submit', function(event) {
+    console.log('Upload Click');
     event.preventDefault(); // Prevent default form submission
 
     const popup = document.getElementById('popup');
@@ -20,7 +21,6 @@ function uploadData() {
   }
 
   // Close the popup after getting the values
-  const popup = document.getElementById('popup');
   popup.style.display = 'none';
 
   const formData = new FormData();
