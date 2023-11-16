@@ -1,7 +1,9 @@
-function showPopup() {
+document.getElementById('uploadForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
   const popup = document.getElementById('popup');
-  popup.style.display = 'block';
-}
+  popup.style.display = 'block'; // Display the popup when the form is submitted
+});
 
 function uploadData() {
   const excelFile = document.getElementById('excelFile').files[0];
