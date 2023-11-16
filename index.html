@@ -14,9 +14,11 @@
     <label for="selectedDate">Select Date:</label>
     <input type="date" id="selectedDate" name="selectedDate">
 
-    <button type="button" onclick="showPopup()">Upload</button>
+    <!-- Change 'button' to 'submit' to trigger form submission -->
+    <button type="submit">Upload</button>
   </form>
 
+  <!-- Hidden popup initially -->
   <div id="popup" class="popup" style="display: none;">
     <form id="loginForm">
       <label for="userId">User ID:</label>
