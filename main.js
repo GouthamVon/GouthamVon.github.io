@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    console.log('Upload Click');
     event.preventDefault(); // Prevent default form submission
 
     const popup = document.getElementById('popup');
     popup.style.display = 'block'; // Display the popup when the form is submitted
     const uploadform = document.getElementById('uploadForm');
     uploadform.style.display = 'none';
-    console.log(uploadform);
   });
 });
 
 function uploadData() {
   popup.style.display = 'none';
+  console.log(popup);
   uploadform.style.display = 'block';
-  console.log(uploadform);
+
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
   const user_id = document.getElementById('userId').value;
