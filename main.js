@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function uploadData() {
   popup.style.display = 'none';
-  console.log(popup);
+  console.log(popup); 
   uploadform.style.display = 'block';
 
   const excelFile = document.getElementById('excelFile').files[0];
