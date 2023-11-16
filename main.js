@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function uploadData() {
+  popup.style.display = 'none';
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
   const user_id = document.getElementById('userId').value;
@@ -19,9 +20,6 @@ function uploadData() {
     alert('All fields are required.');
     return;
   }
-
-  // Close the popup after getting the values
-  popup.style.display = 'none';
 
   const formData = new FormData();
   formData.append('excelFile', excelFile);
