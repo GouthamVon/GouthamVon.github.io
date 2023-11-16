@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Upload</title> 
+  <title>Data Upload</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,17 +18,19 @@
     <button type="submit">Upload</button>
   </form>
 
-  <!-- Hidden popup initially -->
+  <!-- Popup container -->
   <div id="popup" class="popup" style="display: none;">
-    <form id="loginForm">
-      <label for="userId">User ID:</label>
-      <input type="text" id="userId" name="userId">
+    <div class="popup-content">
+      <form id="loginForm">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId">
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
 
-      <button type="button" onclick="uploadData()">Submit</button>
-    </form>
+        <button type="button" onclick="uploadData()">Submit</button>
+      </form>
+    </div>
   </div>
 
   <script src="main.js"></script>
