@@ -26,6 +26,7 @@ function uploadData() {
     alert('Upload successful!');
   })
   .catch(error => {
+    console.log(response);
     console.error('Error:', error);
     alert('Error uploading file. Please try again.');
   });
