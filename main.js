@@ -1,13 +1,13 @@
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('uploadForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
 
-  const popup = document.getElementById('popup');
-  popup.style.display = 'block'; // Display the popup when the form is submitted
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block'; // Display the popup when the form is submitted
+  });
 });
 
 function uploadData() {
-  const popup = document.getElementById('popup');
-  popup.style.display = 'none';
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
   const user_id = document.getElementById('userId').value;
