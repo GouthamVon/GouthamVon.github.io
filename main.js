@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const popup = document.getElementById('popup');
     popup.style.display = 'block'; // Display the popup when the form is submitted
+    const uploadform = document.getElementById('uploadForm');
+    uploadform.style.display = 'none';
   });
 });
 
 function uploadData() {
   popup.style.display = 'none';
+  uploadform.style.display = 'block';
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
   const user_id = document.getElementById('userId').value;
