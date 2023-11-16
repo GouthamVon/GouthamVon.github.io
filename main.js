@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.style.display = 'block'; // Display the popup when the form is submitted
     const uploadform = document.getElementById('uploadForm');
     uploadform.style.display = 'none';
+    console.log(uploadform);
   });
 });
 
 function uploadData() {
   popup.style.display = 'none';
   uploadform.style.display = 'block';
+  console.log(uploadform);
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
   const user_id = document.getElementById('userId').value;
