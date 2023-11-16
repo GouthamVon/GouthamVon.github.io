@@ -14,6 +14,9 @@ function uploadData() {
   fetch('YOUR_API_GATEWAY_ENDPOINT', {
     method: 'POST',
     body: formData,
+    headers: {
+      'x-auth-token': token
+    },
   })
   .then(response => response.json())
   .then(data => {
