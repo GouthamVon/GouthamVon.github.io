@@ -72,7 +72,4 @@ button:hover {
   z-index: 9999; /* Ensure it's above other elements */
 }
 
-.popup-content {
-  max-width: 400px;
-  width: 100%;
-}
+
