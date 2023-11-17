@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function uploadData() {
-  popup.style.display = 'none';
-  console.log(popup); 
   uploadform.style.display = 'block';
+  popup.style.display = 'none';
 
   const excelFile = document.getElementById('excelFile').files[0];
   const selectedDate = document.getElementById('selectedDate').value;
