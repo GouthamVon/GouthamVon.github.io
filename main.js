@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function uploadData() {
+  uploadform = document.getElementById('uploadForm');
   uploadform.style.display = 'block';
   popup.style.display = 'none';
 
-  const excelFile = document.getElementById('excelFile').files[0];
-  const selectedDate = document.getElementById('selectedDate').value;
-  const user_id = document.getElementById('userId').value;
-  const password = document.getElementById('password').value;
+  const excelFile = document.getElementById('excelFile');
+  const selectedDate = document.getElementById('selectedDate');
+  const user_id = document.getElementById('userId');
+  const password = document.getElementById('password');
 
   // Check if fields are empty
   if (!excelFile || !user_id || !password) {
@@ -25,15 +26,15 @@ function uploadData() {
   }
 
   const formData = new FormData();
-  formData.append('excelFile', excelFile);
-  formData.append('selectedDate', selectedDate);
+  formData.append('excelFile', excelFile.files[0]);
+  formData.append('selectedDate', selectedDate.value);
 
   fetch('https://asia-south1-dailyplpublish.cloudfunctions.net/publishPL', {
     method: 'POST',
     body: formData,
     headers: {
-      'x-auth-user-id': user_id,
-      'x-auth-password': password
+      'x-auth-user-id': user_id.value,
+      'x-auth-password': password.value
     },
   })
   .then(response => response.json())
@@ -45,4 +46,9 @@ function uploadData() {
     console.error('Error:', error);
     alert('Error uploading file. Please try again.');
   });
+
+  excelFile.files[0] = null;
+  selectedDate.value = '';
+  user_id.value = '';
+  password.value = '';
 }
