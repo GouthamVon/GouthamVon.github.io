@@ -29,7 +29,7 @@ function uploadData() {
   formData.append('excelFile', excelFile.files[0]);
   formData.append('selectedDate', selectedDate.value);
 
-  fetch('https://asia-south1-dailyplpublish.cloudfunctions.net/publishPL', {
+  fetch('https://script.googleapis.com/v1/scripts/AKfycbywPGWDhfZHZ3xZ1fwHZumgkyygD8zbJuGfMSvcpMokwHU19mH5arGQI5tZbQ-hr3Nc:run', {
     method: 'POST',
     body: formData,
     headers: {
